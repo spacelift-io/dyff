@@ -28,8 +28,6 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/homeport/dyff/internal/cmd"
-
 	"github.com/gonvenience/term"
 )
 

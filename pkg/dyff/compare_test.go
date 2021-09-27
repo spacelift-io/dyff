@@ -24,8 +24,6 @@ import (
 	"github.com/gonvenience/ytbx"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-
-	. "github.com/homeport/dyff/pkg/dyff"
 )
 
 var _ = Describe("Core/Compare", func() {

@@ -27,8 +27,6 @@ import (
 	. "github.com/onsi/gomega"
 
 	. "github.com/gonvenience/bunt"
-
-	. "github.com/homeport/dyff/pkg/dyff"
 )
 
 var _ = Describe("general output tests", func() {

@@ -23,20 +23,8 @@ package dyff
 import (
 	"fmt"
 
-	"github.com/gonvenience/bunt"
-	"github.com/lucasb-eyer/go-colorful"
+	"github.com/mgutz/ansi"
 )
-
-var (
-	additionGreen      = color("#58BF38")
-	modificationYellow = color("#C7C43F")
-	removalRed         = color("#B9311B")
-)
-
-func color(hex string) colorful.Color {
-	color, _ := colorful.Hex(hex)
-	return color
-}
 
 func render(format string, a ...interface{}) string {
 	if len(a) == 0 {
@@ -47,45 +35,29 @@ func render(format string, a ...interface{}) string {
 }
 
 func green(format string, a ...interface{}) string {
-	return colored(additionGreen, render(format, a...))
+	return ansi.ColorFunc("green")(render(format, a...))
 }
 
 func red(format string, a ...interface{}) string {
-	return colored(removalRed, render(format, a...))
+	return ansi.ColorFunc("red")(render(format, a...))
 }
 
 func yellow(format string, a ...interface{}) string {
-	return colored(modificationYellow, render(format, a...))
+	return ansi.ColorFunc("yellow")(render(format, a...))
 }
 
 func lightgreen(format string, a ...interface{}) string {
-	return colored(bunt.LightGreen, render(format, a...))
+	return ansi.ColorFunc(ansi.LightGreen)(render(format, a...))
 }
 
 func lightred(format string, a ...interface{}) string {
-	return colored(bunt.LightSalmon, render(format, a...))
+	return ansi.ColorFunc(ansi.LightRed)(render(format, a...))
 }
 
 func bold(format string, a ...interface{}) string {
-	return bunt.Style(
-		fmt.Sprintf(format, a...),
-		bunt.EachLine(),
-		bunt.Bold(),
-	)
+	return render(format, a...)
 }
 
 func italic(format string, a ...interface{}) string {
-	return bunt.Style(
-		render(format, a...),
-		bunt.EachLine(),
-		bunt.Italic(),
-	)
-}
-
-func colored(color colorful.Color, format string, a ...interface{}) string {
-	return bunt.Style(
-		render(format, a...),
-		bunt.EachLine(),
-		bunt.Foreground(color),
-	)
+	return render(format, a...)
 }
