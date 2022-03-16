@@ -34,8 +34,16 @@ func render(format string, a ...interface{}) string {
 	return fmt.Sprintf(format, a...)
 }
 
+func lightgreen(format string, a ...interface{}) string {
+	return ansi.ColorFunc("green+h")(render(format, a...))
+}
+
 func green(format string, a ...interface{}) string {
 	return ansi.ColorFunc("green")(render(format, a...))
+}
+
+func lightred(format string, a ...interface{}) string {
+	return ansi.ColorFunc("red+h")(render(format, a...))
 }
 
 func red(format string, a ...interface{}) string {
@@ -46,16 +54,12 @@ func yellow(format string, a ...interface{}) string {
 	return ansi.ColorFunc("yellow")(render(format, a...))
 }
 
-func lightgreen(format string, a ...interface{}) string {
-	return ansi.ColorFunc(ansi.LightGreen)(render(format, a...))
+func boldgreen(format string, a ...interface{}) string {
+	return ansi.ColorFunc("green+b")(render(format, a...))
 }
 
-func lightred(format string, a ...interface{}) string {
-	return ansi.ColorFunc(ansi.LightRed)(render(format, a...))
-}
-
-func bold(format string, a ...interface{}) string {
-	return render(format, a...)
+func boldred(format string, a ...interface{}) string {
+	return ansi.ColorFunc("red+b")(render(format, a...))
 }
 
 func italic(format string, a ...interface{}) string {

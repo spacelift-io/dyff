@@ -424,7 +424,7 @@ func highlightRemovals(diffs []diffmatchpatch.Diff) string {
 			buf.WriteString(lightred("%s", part.Text))
 
 		case diffmatchpatch.DiffDelete:
-			buf.WriteString(bold("%s", red("%s", part.Text)))
+			buf.WriteString(boldred("%s", part.Text))
 		}
 	}
 
@@ -442,7 +442,7 @@ func highlightAdditions(diffs []diffmatchpatch.Diff) string {
 			buf.WriteString(lightgreen("%s", part.Text))
 
 		case diffmatchpatch.DiffInsert:
-			buf.WriteString(bold("%s", green("%s", part.Text)))
+			buf.WriteString(boldgreen("%s", part.Text))
 		}
 	}
 
@@ -563,7 +563,7 @@ func isWhitespaceOnlyChange(from string, to string) bool {
 }
 
 func showWhitespaceCharacters(text string) string {
-	return strings.Replace(strings.Replace(text, "\n", bold("↵\n"), -1), " ", bold("·"), -1)
+	return strings.Replace(strings.Replace(text, "\n", "↵\n", -1), " ", "·", -1)
 }
 
 func createStringWithPrefix(prefix string, obj interface{}) string {
