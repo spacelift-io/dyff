@@ -8,7 +8,7 @@ require (
 	github.com/gonvenience/neat v1.3.18
 	github.com/gonvenience/term v1.0.5
 	github.com/gonvenience/text v1.0.10
-	github.com/gonvenience/ytbx v1.4.8
+	github.com/gonvenience/ytbx v1.4.9
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
 	github.com/mitchellh/hashstructure v1.1.0
 	github.com/onsi/ginkgo/v2 v2.28.1
