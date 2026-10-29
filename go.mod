@@ -5,7 +5,7 @@ go 1.26.0
 require (
 	github.com/gonvenience/bunt v1.4.3
 	github.com/gonvenience/idem v0.0.3
-	github.com/gonvenience/neat v1.3.20
+	github.com/gonvenience/neat v1.4.0
 	github.com/gonvenience/term v1.0.5
 	github.com/gonvenience/text v1.0.10
 	github.com/gonvenience/ytbx v1.5.0
@@ -45,10 +45,10 @@ require (
 	github.com/virtuald/go-ordered-json v0.0.0-20170621173500-b18e6e673d74 // indirect
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
 	golang.org/x/mod v0.42.0 // indirect
-	golang.org/x/net v0.60.0 // indirect
+	golang.org/x/net v0.61.0 // indirect
 	golang.org/x/sync v0.24.0 // indirect
 	golang.org/x/sys v0.49.0 // indirect
 	golang.org/x/term v0.47.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
-	golang.org/x/tools v0.51.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
+	golang.org/x/tools v0.52.0 // indirect
 )
