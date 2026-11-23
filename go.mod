@@ -22,7 +22,7 @@ require (
 // cause https://github.com/sergi/go-diff/issues/123
 // fixed in https://github.com/sergi/go-diff/pull/136
 // but currently not tagged
-require github.com/sergi/go-diff v1.4.4
+require github.com/sergi/go-diff v1.4.5
 
 require (
 	github.com/BurntSushi/toml v1.6.0 // indirect
